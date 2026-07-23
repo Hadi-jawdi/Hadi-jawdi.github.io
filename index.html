@@ -3,243 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Researcher & Founder</title>
 
-<!-- Fonts: editorial serif for gravitas, clean sans for body, mono for data/labels -->
+<title>Hadi Jawadi | Founder & CEO</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root{
-    --bg:        #0e131c;
-    --bg-soft:   #151c29;
-    --ink:       #e9ebef;
-    --ink-muted: #8892a3;
-    --brass:     #c9a24b;
-    --line:      rgba(233,235,239,0.10);
-  }
 
-  *{ box-sizing:border-box; margin:0; padding:0; }
+:root{
+    --bg:#0b0f16;
+    --text:#f3f4f6;
+    --muted:#98a2b3;
+    --accent:#d4af37;
+    --border:rgba(255,255,255,.08);
+}
 
-  body{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
     background:
-      radial-gradient(900px 600px at 85% -5%, rgba(201,162,75,0.08), transparent 60%),
-      var(--bg);
-    color: var(--ink);
-    font-family:'Inter', sans-serif;
-    min-height:100vh;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  .wrap{
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .hero{
+        radial-gradient(circle at top right, rgba(212,175,55,.08), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,.03), transparent 45%),
+        var(--bg);
+    color:var(--text);
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding: 4rem 0;
-  }
+}
 
-  .grid{
-    display:flex;
-    gap: 4.5rem;
-    align-items:center;
+.container{
     width:100%;
-  }
+    max-width:900px;
+    margin:auto;
+    padding:60px 30px;
+}
 
-  .col-text{ flex: 1.15; }
-  .col-portrait{ flex: 1; display:flex; justify-content:center; }
+.eyebrow{
+    display:inline-block;
+    font-family:"IBM Plex Mono",monospace;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    font-size:.75rem;
+    color:var(--accent);
+    margin-bottom:24px;
+}
 
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--brass);
-    display:inline-flex;
-    align-items:center;
-    gap:.55rem;
-  }
-  .eyebrow::before{
-    content:"";
-    width:6px; height:6px;
-    border-radius:50%;
-    background: var(--brass);
-  }
+h1{
+    font-family:"Source Serif 4",serif;
+    font-size:clamp(3rem,8vw,5rem);
+    font-weight:500;
+    line-height:1.05;
+    margin-bottom:18px;
+}
 
-  h1{
-    font-family:'Source Serif 4', serif;
-    font-weight: 500;
-    font-size: clamp(2rem, 3.6vw, 3rem);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-    margin: 1.1rem 0 1.3rem;
-  }
-  h1 .accent{
-    color: var(--brass);
-    font-style: italic;
-  }
+.title{
+    font-size:1rem;
+    color:var(--muted);
+    margin-bottom:40px;
+}
 
-  .lead{
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--ink-muted);
-    max-width: 48ch;
-    margin-bottom: 2.2rem;
-  }
+.description{
+    font-size:1.35rem;
+    line-height:1.8;
+    max-width:760px;
+    margin-bottom:40px;
+}
 
-  .facts{
-    border-top: 1px solid var(--line);
-    padding-top: 1.4rem;
-    display:grid;
-    grid-template-columns: auto 1fr;
-    row-gap: .65rem;
-    column-gap: 1.5rem;
-    max-width: 42ch;
-  }
-  .facts dt{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    padding-top: .15rem;
-  }
-  .facts dd{
-    font-size: .95rem;
-    color: var(--ink);
-  }
+.divider{
+    width:80px;
+    height:1px;
+    background:var(--border);
+    margin:40px 0;
+}
 
-  .portrait-wrap{
-    position: relative;
-    width: min(280px, 60vw);
-    aspect-ratio: 1/1;
-  }
-  .ring{
-    position:absolute;
-    inset:-14px;
-    border-radius:50%;
-    border: 1px solid rgba(201,162,75,0.28);
-  }
-  .portrait{
-    position:absolute;
-    inset:0;
-    border-radius:50%;
-    overflow:hidden;
-    background: linear-gradient(160deg, var(--bg-soft), #0b1017);
-    border: 1px solid var(--line);
-  }
-  .portrait img{
-    width:100%; height:100%;
-    object-fit:cover;
-    display:block;
-  }
-  .portrait .fallback{
-    position:absolute; inset:0;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:.68rem;
-    color: var(--ink-muted);
-    letter-spacing:.06em;
-    text-align:center;
-    padding: 1rem;
-  }
-  .caption{
-    text-align:center;
-    font-family:'IBM Plex Mono', monospace;
-    font-size: .68rem;
-    letter-spacing: .05em;
-    color: var(--ink-muted);
-    margin-top: 1.1rem;
-  }
+.mission{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:1.05rem;
+    max-width:720px;
+}
 
-  .contact{
-    margin-top: 2.2rem;
-    display:flex;
-    gap: 1.1rem;
-    flex-wrap:wrap;
-  }
-  .contact a{
-    font-size: .88rem;
-    color: var(--ink-muted);
-    text-decoration:none;
-    border-bottom: 1px solid transparent;
-    transition: color .15s ease, border-color .15s ease;
-  }
-  .contact a:hover,
-  .contact a:focus-visible{
-    color: var(--brass);
-    border-color: var(--brass);
-  }
-  .contact a:focus-visible{ outline: none; }
+.footer{
+    margin-top:70px;
+    color:#70798a;
+    font-size:.9rem;
+    border-top:1px solid var(--border);
+    padding-top:25px;
+}
 
-  @media (max-width: 860px){
-    .grid{ flex-direction: column-reverse; gap: 2.5rem; }
-    .col-text{ text-align:center; }
-    .lead{ margin-left:auto; margin-right:auto; }
-    .facts{ margin: 0 auto; text-align:left; }
-    .contact{ justify-content:center; }
-  }
+@media(max-width:768px){
+
+.container{
+    padding:40px 24px;
+}
+
+.description{
+    font-size:1.15rem;
+}
+
+}
+
 </style>
+
 </head>
 <body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="grid">
+<div class="container">
 
-      <div class="col-text">
-        <span class="eyebrow">Founder &amp; Chief Scientist</span>
+    <span class="eyebrow">
+        Founder · CEO · AI Scientist
+    </span>
 
-        <h1>
-          Advancing artificial intelligence, <span class="accent">responsibly</span>.
-        </h1>
+    <h1>
+        Hadi Jawadi
+    </h1>
 
-        <p class="lead">
-          I lead research and engineering toward advanced AI systems —
-          working to apply them to disease, scientific discovery, and other
-          problems worth solving.
-        </p>
+    <p class="title">
+        Building the future of Artificial Superintelligence
+    </p>
 
-        <dl class="facts">
-          <dt>Research</dt>
-          <dd>Machine learning &amp; AI safety</dd>
-          <dt>Role</dt>
-          <dd>Founder &amp; CEO, [Company name]</dd>
-          <dt>Focus</dt>
-          <dd>Capability, safety, and real-world application</dd>
-        </dl>
+    <p class="description">
+        I build intelligent systems that push the frontier of artificial intelligence.
+        My work combines AI research, software engineering, and entrepreneurship to
+        create technologies that accelerate scientific discovery, transform healthcare,
+        and expand access to knowledge.
+    </p>
 
-        <div class="contact">
-          <a href="mailto:you@example.com">Email</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">X / Twitter</a>
-          <a href="#">Google Scholar</a>
-        </div>
-      </div>
+    <div class="divider"></div>
 
-      <div class="col-portrait">
-        <div>
-          <div class="portrait-wrap">
-            <div class="ring"></div>
-            <div class="portrait">
-              <img src="images/asi_builder.png" alt="Portrait" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="fallback" style="display:none;">ADD&nbsp;PHOTO<br>images/asi_builder.png</div>
-            </div>
-          </div>
-          <p class="caption">AI safety &amp; applied research</p>
-        </div>
-      </div>
+    <p class="mission">
+        My mission is to develop safe, powerful, and scalable artificial intelligence
+        that helps humanity solve its most important challenges. I believe the next
+        generation of AI will reshape science, medicine, education, and every major
+        industry, and I am committed to building that future responsibly.
+    </p>
 
+    <div class="footer">
+        © 2026 Hadi Jawadi
     </div>
-  </div>
-</header>
+
+</div>
 
 </body>
 </html>
