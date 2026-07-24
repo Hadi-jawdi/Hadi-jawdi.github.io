@@ -8,17 +8,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-
-:root{
-    --bg:#0b0f16;
-    --text:#f3f4f6;
-    --muted:#98a2b3;
-    --accent:#d4af37;
-    --border:rgba(255,255,255,.08);
-}
 
 *{
     margin:0;
@@ -26,90 +19,119 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:"Inter",sans-serif;
-    background:
-        radial-gradient(circle at top right, rgba(212,175,55,.08), transparent 40%),
-        radial-gradient(circle at bottom left, rgba(255,255,255,.03), transparent 45%),
-        var(--bg);
-    color:var(--text);
-    min-height:100vh;
-    display:flex;
-    align-items:center;
+    font-family:Inter,sans-serif;
+    background:#ffffff;
+    color:#111;
+    line-height:1.7;
 }
 
 .container{
-    width:100%;
+    width:90%;
     max-width:900px;
     margin:auto;
-    padding:60px 30px;
+    padding:80px 20px;
 }
 
-.eyebrow{
-    display:inline-block;
-    font-family:"IBM Plex Mono",monospace;
+.small{
     text-transform:uppercase;
-    letter-spacing:.15em;
-    font-size:.75rem;
-    color:var(--accent);
-    margin-bottom:24px;
+    letter-spacing:3px;
+    color:#777;
+    font-size:13px;
+    margin-bottom:20px;
 }
 
 h1{
     font-family:"Source Serif 4",serif;
-    font-size:clamp(3rem,8vw,5rem);
-    font-weight:500;
-    line-height:1.05;
-    margin-bottom:18px;
+    font-size:56px;
+    font-weight:600;
+    margin-bottom:10px;
 }
 
-.title{
-    font-size:1rem;
-    color:var(--muted);
-    margin-bottom:40px;
-}
-
-.description{
-    font-size:1.35rem;
-    line-height:1.8;
-    max-width:760px;
-    margin-bottom:40px;
-}
-
-.divider{
-    width:80px;
-    height:1px;
-    background:var(--border);
-    margin:40px 0;
-}
-
-.mission{
-    color:var(--muted);
-    line-height:1.9;
-    font-size:1.05rem;
-    max-width:720px;
-}
-
-.footer{
-    margin-top:70px;
-    color:#70798a;
-    font-size:.9rem;
-    border-top:1px solid var(--border);
-    padding-top:25px;
-}
-
-@media(max-width:768px){
-
-.container{
-    padding:40px 24px;
+.subtitle{
+    color:#666;
+    font-size:20px;
+    margin-bottom:45px;
 }
 
 .description{
-    font-size:1.15rem;
+    font-size:20px;
+    color:#333;
+    margin-bottom:50px;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #e5e5e5;
+    margin:50px 0;
+}
+
+.section-title{
+    font-size:26px;
+    margin-bottom:25px;
+    font-family:"Source Serif 4",serif;
+}
+
+.timeline p{
+    margin-bottom:14px;
+}
+
+.timeline span{
+    color:#888;
+    font-size:14px;
+}
+
+.timeline a{
+    color:#000;
+}
+
+.inspiration{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.person{
+    text-align:center;
+}
+
+.person img{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.person h4{
+    margin-top:15px;
+}
+
+.person p{
+    color:#666;
+    font-size:15px;
+}
+
+footer{
+    margin-top:80px;
+    border-top:1px solid #eee;
+    padding-top:30px;
+    color:#888;
+}
+
+@media(max-width:700px){
+
+h1{
+    font-size:42px;
+}
+
+.description{
+    font-size:18px;
+}
+
+.inspiration{
+    justify-content:center;
 }
 
 }
@@ -117,44 +139,86 @@ h1{
 </style>
 
 </head>
+
 <body>
 
 <div class="container">
 
-    <span class="eyebrow">
-        Founder · CEO 
-    </span>
+<div class="small">
+Founder · CEO
+</div>
 
-    <h3>
-        Hadi Jawadi
-    </h3>
+<h1>Hadi Jawadi</h1>
 
-    <p class="title">
-        Building Artificial Super Intelligence!
-    </p>
+<p class="subtitle">
+Building Artificial Superintelligence
+</p>
 
-    <p class="description">
-        We are trying to acheive ASI. ASI is within rich. We want to make sure that this technology goes well and everyone benefits. 
-        We have compute, scientists, engineers and everything to work toward ASI. 
-        
-    </p>
+<p class="description">
+I am a founder, software engineer, and AI researcher focused on advancing artificial intelligence to solve humanity's most important challenges. My long-term mission is to contribute to the development of Artificial Superintelligence (ASI) that benefits everyone through responsible research, engineering, and open scientific progress.
+</p>
 
-    <div class="divider"></div>
+<hr>
 
-    <p class="mission">
-       <h5> Background</h5>
-          <div>
-              <P> Building ASI <span>7/24/2026 </span> _____.........</P>
-              <p> Founder of <a href='https://vknow.app/'>Vknow.app for students</a></p>
-              <p> Founder & CEO at Nextcare.ai (An organization wanted to cure or prevent all human diseases)
+<h2 class="section-title">
+Background
+</h2>
 
-              
-          </div>
-    </p>
+<div class="timeline">
 
-    <div class="footer">
-        © 2026 Hadi Jawadi
-    </div>
+<p>
+<span>2026</span><br>
+Building AI systems and studying modern machine learning.
+</p>
+
+<p>
+Founder of
+<a href="https://vknow.app/" target="_blank">
+VKnow.app
+</a>,
+an educational platform for students.
+</p>
+
+<p>
+Founder & CEO of
+<strong>NextCare.ai</strong>,
+an initiative exploring how artificial intelligence can improve healthcare and accelerate medical research.
+</p>
+
+</div>
+
+<hr>
+
+<h2 class="section-title">
+People Who Inspire My Work
+</h2>
+
+<div class="inspiration">
+
+<div class="person">
+
+<!-- Replace with your local image -->
+<img src="images/ChatGPT Image Jul 24, 2026, 01_39_09 PM.png">
+
+
+<!-- Replace with your local image -->
+<img src="images/karpathy.jpg" alt="Andrej Karpathy">
+
+<h4>Andrej Karpathy</h4>
+
+<p>
+AI research, deep learning, and education.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Hadi Jawadi
+
+</footer>
 
 </div>
 
