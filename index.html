@@ -1,180 +1,1043 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modabber Private High School — Ghazni, Afghanistan</title>
+<meta name="description" content="Modabber Private High School in Ghazni — academic excellence, student achievement, and a warm learning community for grades 9–12.">
 
-<title>Hadi Jawadi | Founder & CEO</title>
-
+<link id="bsCss" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+  :root{
+    --lapis:#1D4E78;
+    --lapis-deep:#0F2A42;
+    --lapis-soft:#EAF1F6;
+    --turquoise:#3E8E8E;
+    --pomegranate:#C1572B;
+    --gold:#C99A3E;
+    --gold-light:#E9C67F;
+    --sand:#FBF6EC;
+    --sand-2:#F3E9D6;
+    --ink:#2B2620;
+    --muted:#6B6455;
+    --radius-lg:22px;
+    --radius-md:14px;
+    --radius-sm:9px;
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Manrope',-apple-system,sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+    --dari:'Vazirmatn','Manrope',sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  }
+  body{ font-family:var(--sans); color:var(--ink); background:var(--sand); -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  h1,h2,h3,h4,.font-serif{ font-family:var(--serif); }
+  a{ color:inherit; text-decoration:none; }
+  a:focus-visible, button:focus-visible, .form-control:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; border-radius:4px; }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  html[lang="fa"] body, html[lang="fa"] h1, html[lang="fa"] h2, html[lang="fa"] h3, html[lang="fa"] h4,
+  html[lang="fa"] .eyebrow, html[lang="fa"] .pill-badge{ font-family:var(--dari) !important; }
+  html[lang="fa"] .eyebrow{ letter-spacing:0; text-transform:none; }
+  html[lang="fa"] .achieve-year, html[lang="fa"] .news-date, html[lang="fa"] .stat-num, html[lang="fa"] .step-num{ font-family:var(--dari) !important; }
 
-body{
-    font-family:Inter,sans-serif;
-    background:#ffffff;
-    color:#111;
-    line-height:1.7;
-}
+  .eyebrow{ font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--pomegranate); display:flex; align-items:center; gap:.5rem; }
+  .eyebrow .star-ico{ width:14px; height:14px; flex:none; }
+  .eyebrow.on-dark{ color:var(--gold-light); }
+  .star-ico path,.star-ico rect{ vector-effect:non-scaling-stroke; }
+  .star-divider{ width:100%; height:26px; display:block; }
 
-.container{
-    width:90%;
-    max-width:900px;
-    margin:auto;
-    padding:80px 20px;
-}
+  /* ===== NAVBAR ===== */
+  .navbar-modabber{ position:fixed; top:0; left:0; right:0; z-index:1000; padding:.9rem 0; background:rgba(251,246,236,0); transition:background .3s ease, box-shadow .3s ease, padding .3s ease; }
+  .navbar-modabber.is-scrolled{ background:rgba(251,246,236,.97); backdrop-filter:blur(8px); box-shadow:0 6px 24px rgba(29,78,120,.10); padding:.6rem 0; }
+  .brand-mark{ display:flex; align-items:center; gap:.65rem; font-family:var(--serif); font-weight:700; font-size:1.1rem; color:var(--lapis); }
+  .navbar-modabber.is-scrolled .brand-mark, .navbar-modabber.is-scrolled .nav-link{ color:var(--lapis) !important; }
+  .navbar-modabber:not(.is-scrolled) .brand-mark, .navbar-modabber:not(.is-scrolled) .nav-link{ color:#fff !important; }
+  .crest-badge{ width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg, var(--lapis), var(--turquoise)); display:flex; align-items:center; justify-content:center; flex:none; box-shadow:0 4px 12px rgba(29,78,120,.35); transition:transform .3s ease; }
+  .brand-mark:hover .crest-badge{ transform:rotate(-8deg) scale(1.06); }
+  .crest-badge span{ font-family:var(--serif); color:#fff; font-weight:700; font-size:1.15rem; }
+  .navbar-modabber .nav-link{ font-size:.92rem; font-weight:600; padding:.55rem 1rem !important; border-radius:var(--radius-sm); transition:background .2s ease; }
+  .navbar-modabber .nav-link:hover{ background:rgba(255,255,255,.12); }
+  .navbar-modabber.is-scrolled .nav-link:hover{ background:var(--lapis-soft); }
+  .btn-contact-nav{ background:var(--pomegranate); color:#fff !important; border-radius:var(--radius-sm); font-weight:700; font-size:.88rem; padding:.55rem 1.2rem !important; box-shadow:0 6px 16px rgba(193,87,43,.3); }
+  .btn-contact-nav:hover{ background:#a44a24; }
 
-.small{
-    text-transform:uppercase;
-    letter-spacing:3px;
-    color:#777;
-    font-size:13px;
-    margin-bottom:20px;
-}
+  .lang-switch{ display:inline-flex; background:rgba(255,255,255,.18); border-radius:999px; padding:3px; gap:2px; }
+  .navbar-modabber.is-scrolled .lang-switch{ background:var(--lapis-soft); }
+  .lang-btn{ border:none; background:transparent; font-size:.76rem; font-weight:800; padding:.42rem .85rem; border-radius:999px; cursor:pointer; color:inherit; line-height:1; }
+  .lang-btn.active{ background:var(--gold); color:var(--lapis-deep); }
 
-h1{
-    font-family:"Source Serif 4",serif;
-    font-size:56px;
-    font-weight:600;
-    margin-bottom:10px;
-}
+  @media (max-width:991.98px){
+    .navbar-collapse{ background:#fff; border-radius:var(--radius-md); padding:1.1rem 1rem; margin-top:.75rem; box-shadow:0 12px 30px rgba(29,78,120,.15); }
+    .navbar-modabber .navbar-collapse .nav-link{ color:var(--lapis) !important; }
+    .navbar-modabber .navbar-collapse .nav-link:hover{ background:var(--lapis-soft); }
+    .navbar-toggler{ color:#fff; }
+    .navbar-modabber.is-scrolled .navbar-toggler{ color:var(--lapis); }
+    .lang-switch{ background:var(--lapis-soft); color:var(--lapis); margin-bottom:.6rem; }
+  }
 
-.subtitle{
-    color:#666;
-    font-size:20px;
-    margin-bottom:45px;
-}
+  /* ===== BUTTONS ===== */
+  .btn-primary-modabber{ background:linear-gradient(135deg, var(--pomegranate), #a44a24); border:none; color:#fff; font-weight:700; font-size:.96rem; padding:.8rem 1.6rem; border-radius:var(--radius-sm); transition:transform .2s ease, box-shadow .2s ease; box-shadow:0 10px 24px rgba(193,87,43,.32); }
+  .btn-primary-modabber:hover{ transform:translateY(-2px); color:#fff; box-shadow:0 14px 30px rgba(193,87,43,.4); }
+  .btn-ghost-light{ border:1.5px solid rgba(255,255,255,.55); color:#fff; font-weight:600; font-size:.96rem; padding:.76rem 1.5rem; border-radius:var(--radius-sm); transition:background .2s ease, border-color .2s ease; }
+  .btn-ghost-light:hover{ background:rgba(255,255,255,.14); color:#fff; border-color:#fff; }
 
-.description{
-    font-size:20px;
-    color:#333;
-    margin-bottom:50px;
-}
+  /* ===== HERO ===== */
+  .masthead{
+    position:relative; overflow:hidden; color:#fff; padding:8.5rem 0 5rem;
+    background:
+      radial-gradient(900px 500px at 15% -10%, rgba(62,142,142,.35), transparent 60%),
+      radial-gradient(700px 500px at 100% 10%, rgba(233,198,127,.22), transparent 55%),
+      linear-gradient(160deg, var(--lapis) 0%, var(--lapis-deep) 85%);
+  }
+  .masthead-pattern{ position:absolute; inset:0; opacity:.4; pointer-events:none; }
+  .pill-badge{ display:inline-flex; align-items:center; gap:.45rem; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28); color:#fff; font-size:.78rem; font-weight:700; padding:.4rem .9rem .4rem .55rem; border-radius:999px; margin-bottom:1.1rem; }
+  .pill-badge .dot{ width:8px; height:8px; border-radius:50%; background:#7CD9A8; box-shadow:0 0 0 3px rgba(124,217,168,.28); }
+  .masthead h1{ font-size:clamp(2.3rem,4.6vw,3.5rem); font-weight:700; line-height:1.08; margin:.8rem 0 .7rem; letter-spacing:-.01em; }
+  .hero-highlight{ background:linear-gradient(90deg, var(--gold-light), #8fd6d6); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .masthead .lede{ max-width:520px; color:rgba(255,255,255,.86); font-size:1.03rem; line-height:1.75; }
+  .masthead-stats{ display:flex; gap:1.1rem; flex-wrap:wrap; margin-top:2.3rem; }
+  .stat-pill{ background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.18); border-radius:var(--radius-md); padding:.85rem 1.15rem; min-width:118px; transition:transform .25s ease, background .25s ease; }
+  .stat-pill:hover{ transform:translateY(-4px); background:rgba(255,255,255,.15); }
+  .stat-pill .stat-num{ font-family:var(--mono); font-size:1.3rem; color:var(--gold-light); }
+  .stat-pill .stat-label{ font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:rgba(255,255,255,.68); margin-top:.15rem; }
+  html[lang="fa"] .stat-pill .stat-label{ letter-spacing:0; text-transform:none; }
 
-hr{
-    border:none;
-    border-top:1px solid #e5e5e5;
-    margin:50px 0;
-}
+  .hero-art-wrap{ position:relative; max-width:460px; margin:2.5rem auto 0; }
+  .hero-art{ width:100%; height:auto; display:block; filter:drop-shadow(0 30px 50px rgba(0,0,0,.28)); transition:transform .2s ease-out; }
+  .float-badge{ position:absolute; background:rgba(255,255,255,.97); color:var(--ink); border-radius:var(--radius-md); padding:.7rem .95rem; box-shadow:0 16px 34px rgba(0,0,0,.22); display:flex; align-items:center; gap:.65rem; max-width:220px; animation:floaty 4.5s ease-in-out infinite; }
+  .float-badge .fb-icon{ width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1rem; flex:none; }
+  .float-badge .fb-num{ font-family:var(--serif); font-weight:700; font-size:1.05rem; line-height:1.1; }
+  .float-badge .fb-label{ font-size:.68rem; color:var(--muted); line-height:1.2; }
+  .badge-1{ top:2%; inset-inline-start:-8%; animation-delay:0s; }
+  .badge-2{ bottom:6%; inset-inline-end:-6%; animation-delay:1.2s; }
+  @keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-10px);} }
+  @media (max-width:991.98px){ .float-badge{ display:none; } }
 
-.section-title{
-    font-size:26px;
-    margin-bottom:25px;
-    font-family:"Source Serif 4",serif;
-}
+  .scroll-cue{ position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:rgba(255,255,255,.75); font-size:1.3rem; animation:bounce 2.2s infinite; }
+  @keyframes bounce{ 0%,100%{ transform:translateX(-50%) translateY(0);} 50%{ transform:translateX(-50%) translateY(8px);} }
 
-.timeline p{
-    margin-bottom:14px;
-}
+  /* ===== SECTION shell ===== */
+  .section{ padding:5.2rem 0; }
+  .section-alt{ background:var(--sand-2); }
+  .section-head{ margin-bottom:2.8rem; }
+  .section-head h2{ font-size:clamp(1.75rem,3vw,2.4rem); font-weight:700; margin:.5rem 0 .7rem; color:var(--lapis); letter-spacing:-.01em; }
+  .section-head p{ max-width:600px; color:var(--muted); line-height:1.7; }
 
-.timeline span{
-    color:#888;
-    font-size:14px;
-}
+  /* ===== WELCOME ===== */
+  .welcome-card{ background:#fff; border-radius:var(--radius-lg); padding:2.6rem; box-shadow:0 18px 46px rgba(29,78,120,.09); border:1px solid rgba(29,78,120,.08); position:relative; }
+  .welcome-card::before{ content:"\201C"; position:absolute; top:.6rem; inset-inline-start:1.5rem; font-family:var(--serif); font-size:4.5rem; color:var(--lapis-soft); line-height:1; }
+  html[lang="fa"] .welcome-card::before{ content:""; }
+  .welcome-card q{ font-family:var(--serif); font-size:1.3rem; font-style:italic; line-height:1.65; color:var(--ink); quotes:none; display:block; position:relative; }
+  html[lang="fa"] .welcome-card q{ font-style:normal; font-weight:500; }
+  .welcome-signer{ display:flex; align-items:center; gap:.9rem; margin-top:1.6rem; }
+  .welcome-avatar{ width:52px; height:52px; border-radius:50%; background:linear-gradient(135deg, var(--lapis), var(--turquoise)); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:700; flex:none; }
+  .welcome-signer .name{ font-weight:700; }
+  .welcome-signer .role{ font-size:.85rem; color:var(--muted); }
 
-.timeline a{
-    color:#000;
-}
+  /* ===== PILLARS ===== */
+  .pillar-card{ background:#fff; border-radius:var(--radius-lg); padding:2rem 1.7rem; height:100%; border:1px solid rgba(29,78,120,.08); transition:transform .25s ease, box-shadow .25s ease; }
+  .pillar-card:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(29,78,120,.14); }
+  .pillar-icon{ width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.1rem; color:#fff; transition:transform .25s ease; }
+  .pillar-card:hover .pillar-icon{ transform:scale(1.08) rotate(-4deg); }
+  .pillar-card h3{ font-size:1.12rem; font-weight:700; margin-bottom:.6rem; color:var(--ink); }
+  .pillar-card p{ color:var(--muted); font-size:.92rem; line-height:1.65; margin:0; }
 
-.inspiration{
-    display:flex;
-    gap:40px;
-    flex-wrap:wrap;
-    margin-top:30px;
-}
+  /* ===== FEATURED ACHIEVEMENT ===== */
+  .featured-achieve{ background:linear-gradient(120deg, var(--lapis), #285e88 55%, var(--turquoise)); border-radius:var(--radius-lg); padding:2.2rem 2.4rem; color:#fff; display:flex; align-items:center; gap:1.6rem; flex-wrap:wrap; margin-bottom:2.4rem; box-shadow:0 20px 44px rgba(29,78,120,.25); }
+  .featured-achieve .fa-icon{ width:64px; height:64px; border-radius:16px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.3); display:flex; align-items:center; justify-content:center; font-size:1.7rem; flex:none; }
+  .featured-achieve .fa-tag{ font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-light); margin-bottom:.3rem; }
+  html[lang="fa"] .featured-achieve .fa-tag{ letter-spacing:0; text-transform:none; }
+  .featured-achieve h3{ font-size:1.3rem; font-weight:700; margin:0 0 .35rem; }
+  .featured-achieve p{ margin:0; color:rgba(255,255,255,.85); font-size:.94rem; max-width:520px; }
 
-.person{
-    text-align:center;
-}
+  /* ===== ACHIEVEMENTS ===== */
+  .filter-row{ display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:2.2rem; }
+  .filter-chip{ font-family:inherit; font-size:.85rem; font-weight:700; border-radius:999px; padding:.5rem 1.15rem; border:1.5px solid rgba(29,78,120,.2); background:#fff; color:var(--lapis); cursor:pointer; transition:background .2s ease, color .2s ease, border-color .2s ease; }
+  .filter-chip.active,.filter-chip:hover{ background:var(--lapis); border-color:var(--lapis); color:#fff; }
 
-.person img{
-    width:170px;
-    height:170px;
-    object-fit:cover;
-    border-radius:10px;
-    border:1px solid #ddd;
-}
+  .achieve-card{ background:#fff; border-radius:var(--radius-lg); padding:1.7rem; height:100%; border:1px solid rgba(29,78,120,.08); border-inline-start:4px solid var(--cat-color,var(--lapis)); transition:transform .25s ease, box-shadow .25s ease; }
+  .achieve-card:hover{ transform:translateY(-5px); box-shadow:0 16px 34px rgba(29,78,120,.12); }
+  .achieve-top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; }
+  .achieve-icon{ width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.15rem; color:#fff; background:var(--cat-color,var(--lapis)); }
+  .achieve-year{ font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+  .achieve-card h3{ font-size:1.08rem; font-weight:700; margin:0 0 .4rem; color:var(--ink); }
+  .achieve-card p{ font-size:.9rem; color:var(--muted); line-height:1.6; margin-bottom:1rem; }
+  .achieve-tag{ display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; padding:.28rem .65rem; border-radius:999px; background:color-mix(in srgb, var(--cat-color,var(--lapis)) 14%, white); color:var(--cat-color,var(--lapis)); }
+  html[lang="fa"] .achieve-tag{ letter-spacing:0; text-transform:none; }
+  .cat-scholarship{ --cat-color:var(--pomegranate); }
+  .cat-olympiad{ --cat-color:var(--gold); }
+  .cat-research{ --cat-color:var(--turquoise); }
+  .cat-competition{ --cat-color:var(--lapis); }
 
-.person h4{
-    margin-top:15px;
-}
+  /* ===== CAMPUS ===== */
+  .campus-item{ display:flex; gap:1rem; align-items:flex-start; padding:1.3rem 0; border-bottom:1px solid rgba(29,78,120,.1); }
+  .campus-item:last-child{ border-bottom:none; }
+  .campus-icon{ width:46px; height:46px; border-radius:12px; background:var(--lapis-soft); color:var(--lapis); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex:none; transition:transform .2s ease, background .2s ease, color .2s ease; }
+  .campus-item:hover .campus-icon{ background:var(--lapis); color:#fff; transform:scale(1.06); }
+  .campus-item h3{ font-size:1.02rem; font-weight:700; margin:0 0 .25rem; }
+  .campus-item p{ font-size:.88rem; color:var(--muted); margin:0; line-height:1.55; }
 
-.person p{
-    color:#666;
-    font-size:15px;
-}
+  /* ===== FACULTY ===== */
+  .faculty-card{ background:#fff; border-radius:var(--radius-lg); padding:1.8rem 1.6rem; height:100%; border:1px solid rgba(29,78,120,.08); transition:transform .25s ease, box-shadow .25s ease; }
+  .faculty-card:hover{ transform:translateY(-5px); box-shadow:0 16px 34px rgba(29,78,120,.12); }
+  .faculty-avatar{ width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:700; font-size:1.05rem; color:#fff; margin-bottom:1rem; }
+  .faculty-card h3{ font-size:1.05rem; font-weight:700; margin-bottom:.1rem; }
+  .faculty-subject{ font-size:.76rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--pomegranate); display:block; margin-bottom:.7rem; }
+  html[lang="fa"] .faculty-subject{ letter-spacing:0; text-transform:none; }
+  .faculty-card p{ color:var(--muted); font-size:.89rem; line-height:1.6; margin:0; }
 
-footer{
-    margin-top:80px;
-    border-top:1px solid #eee;
-    padding-top:30px;
-    color:#888;
-}
+  /* ===== CREED ===== */
+  .creed-band{ position:relative; overflow:hidden; background:linear-gradient(135deg, var(--pomegranate), #7a3016); color:#fff; padding:5.5rem 0; }
+  .creed-slide{ display:none; text-align:center; max-width:760px; margin:0 auto; }
+  .creed-slide.active{ display:block; }
+  .creed-slide q{ font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(1.3rem,3vw,2rem); line-height:1.45; quotes:none; display:block; }
+  html[lang="fa"] .creed-slide q{ font-style:normal; }
+  .creed-dots{ display:flex; gap:.5rem; justify-content:center; margin-top:2.2rem; }
+  .creed-dots button{ width:9px; height:9px; border-radius:50%; border:1px solid rgba(255,255,255,.7); background:transparent; padding:0; cursor:pointer; }
+  .creed-dots button.active{ background:#fff; }
 
-@media(max-width:700px){
+  /* ===== TESTIMONIALS ===== */
+  .testimonial-card{ background:#fff; border-radius:var(--radius-lg); padding:1.9rem; height:100%; border:1px solid rgba(29,78,120,.08); transition:transform .25s ease, box-shadow .25s ease; }
+  .testimonial-card:hover{ transform:translateY(-5px); box-shadow:0 16px 34px rgba(29,78,120,.12); }
+  .testimonial-stars{ color:var(--gold); font-size:.85rem; margin-bottom:.9rem; letter-spacing:.15em; }
+  .testimonial-card q{ font-family:var(--serif); font-style:italic; font-size:1.02rem; line-height:1.6; quotes:none; display:block; color:var(--ink); }
+  html[lang="fa"] .testimonial-card q{ font-style:normal; }
+  .testimonial-who{ display:flex; align-items:center; gap:.7rem; margin-top:1.2rem; }
+  .testimonial-avatar{ width:38px; height:38px; border-radius:50%; background:var(--lapis-soft); color:var(--lapis); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.8rem; flex:none; }
+  .testimonial-who .t-name{ font-weight:700; font-size:.88rem; }
+  .testimonial-who .t-role{ font-size:.76rem; color:var(--muted); }
 
-h1{
-    font-size:42px;
-}
+  /* ===== NEWS ===== */
+  .news-card{ background:#fff; border-radius:var(--radius-lg); overflow:hidden; height:100%; border:1px solid rgba(29,78,120,.08); transition:transform .25s ease, box-shadow .25s ease; }
+  .news-card:hover{ transform:translateY(-5px); box-shadow:0 16px 34px rgba(29,78,120,.12); }
+  .news-tab{ height:6px; background:var(--lapis); }
+  .news-card .body{ padding:1.6rem; }
+  .news-date{ font-family:var(--mono); font-size:.74rem; color:var(--muted); }
+  .news-card h3{ font-size:1.02rem; font-weight:700; margin:.5rem 0 .5rem; color:var(--ink); }
+  .news-card p{ font-size:.88rem; color:var(--muted); line-height:1.6; margin:0; }
 
-.description{
-    font-size:18px;
-}
+  /* ===== ENROLLMENT STEPS ===== */
+  .step-row{ display:flex; gap:1.2rem; align-items:flex-start; }
+  .step-num{ width:38px; height:38px; border-radius:50%; background:var(--lapis); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:600; flex:none; }
+  .step-row h3{ font-size:1rem; font-weight:700; margin-bottom:.3rem; }
+  .step-row p{ font-size:.9rem; color:var(--muted); margin:0; line-height:1.6; }
 
-.inspiration{
-    justify-content:center;
-}
+  /* ===== CONTACT ===== */
+  .contact-info-card{ background:var(--lapis); color:#fff; border-radius:var(--radius-lg); padding:2.3rem; }
+  .contact-row{ display:flex; gap:1rem; padding:.95rem 0; border-bottom:1px solid rgba(255,255,255,.15); }
+  .contact-row:last-child{ border-bottom:none; }
+  .contact-row i{ color:var(--gold-light); font-size:1.05rem; margin-top:.15rem; }
+  .contact-row .label{ font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:rgba(255,255,255,.6); margin-bottom:.2rem; }
+  html[lang="fa"] .contact-row .label{ letter-spacing:0; text-transform:none; }
+  .contact-row .value{ font-size:.95rem; line-height:1.55; }
+  .map-frame{ width:100%; height:100%; min-height:240px; border:none; border-radius:var(--radius-lg); }
+  .form-card{ background:#fff; border-radius:var(--radius-lg); padding:2rem; border:1px solid rgba(29,78,120,.08); }
+  .form-control{ background:var(--sand); border:1px solid rgba(29,78,120,.15); border-radius:var(--radius-sm); font-size:.92rem; padding:.65rem .9rem; }
+  .form-control:focus{ box-shadow:none; border-color:var(--lapis); }
+  label{ font-size:.78rem; font-weight:700; color:var(--muted); margin-bottom:.35rem; display:block; }
 
-}
+  /* ===== FOOTER ===== */
+  footer{ background:var(--lapis-deep); color:rgba(255,255,255,.68); padding:3rem 0 1.6rem; font-size:.88rem; }
+  footer a:hover{ color:var(--gold-light); }
+  footer .foot-head{ font-size:.74rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold-light); margin-bottom:.9rem; }
+  html[lang="fa"] footer .foot-head{ letter-spacing:0; text-transform:none; }
+  footer ul{ list-style:none; padding:0; margin:0; }
+  footer li{ margin-bottom:.55rem; }
+  .foot-bottom{ border-top:1px solid rgba(255,255,255,.12); margin-top:2.2rem; padding-top:1.3rem; font-size:.78rem; color:rgba(255,255,255,.4); }
 
+  /* ===== BACK TO TOP ===== */
+  .back-to-top{ position:fixed; bottom:22px; inset-inline-end:22px; width:46px; height:46px; border-radius:50%; background:var(--lapis); color:#fff; border:none; display:flex; align-items:center; justify-content:center; font-size:1.1rem; box-shadow:0 10px 24px rgba(29,78,120,.35); opacity:0; pointer-events:none; transform:translateY(10px); transition:opacity .25s ease, transform .25s ease, background .2s ease; z-index:999; }
+  .back-to-top.show{ opacity:1; pointer-events:auto; transform:none; }
+  .back-to-top:hover{ background:var(--pomegranate); }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; } .scroll-cue,.float-badge{ animation:none; } }
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="star8" viewBox="0 0 40 40">
+      <g fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="10" y="10" width="20" height="20"/>
+        <rect x="10" y="10" width="20" height="20" transform="rotate(45 20 20)"/>
+      </g>
+    </symbol>
+    <pattern id="starPattern" width="46" height="46" patternUnits="userSpaceOnUse">
+      <g stroke="#E9C67F" stroke-width=".7" fill="none" opacity=".5">
+        <rect x="11" y="11" width="24" height="24"/>
+        <rect x="11" y="11" width="24" height="24" transform="rotate(45 23 23)"/>
+      </g>
+    </pattern>
+    <pattern id="starPatternDivider" width="34" height="26" patternUnits="userSpaceOnUse">
+      <g stroke="#C99A3E" stroke-width=".8" fill="none">
+        <rect x="7" y="3" width="18" height="18"/>
+        <rect x="7" y="3" width="18" height="18" transform="rotate(45 16 12)"/>
+      </g>
+    </pattern>
+  </defs>
+</svg>
 
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-modabber" id="mainNav">
+  <div class="container">
+    <a class="brand-mark" href="#top">
+      <span class="crest-badge"><span>M</span></span>
+      Modabber
+    </a>
+    <div class="d-flex align-items-center gap-2 order-lg-3">
+      <div class="lang-switch d-none d-lg-inline-flex" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="fa">دری</button>
+      </div>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navMain">
+      <div class="lang-switch d-lg-none mb-2" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="fa">دری</button>
+      </div>
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#welcome" data-i18n="nav.welcome">Welcome</a></li>
+        <li class="nav-item"><a class="nav-link" href="#achievements" data-i18n="nav.achievements">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#campus" data-i18n="nav.campus">Campus</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faculty" data-i18n="nav.faculty">Faculty</a></li>
+        <li class="nav-item"><a class="nav-link" href="#news" data-i18n="nav.news">News</a></li>
+        <li class="nav-item"><a class="nav-link btn-contact-nav" href="#contact" data-i18n="nav.contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<div class="small">
-Founder · CEO
-</div>
+<!-- ===== HERO ===== -->
+<header class="masthead" id="top">
+  <svg class="masthead-pattern" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#starPattern)"/></svg>
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="pill-badge"><span class="dot"></span><span data-i18n="hero.pill">Now Enrolling for 2027</span></div>
+        <div class="eyebrow on-dark">
+          <svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg>
+          <span data-i18n="hero.eyebrow">Private High School · Grades 1–12 · Ghazni, Afghanistan</span>
+        </div>
+        <h1><span class="hero-highlight" data-i18n="hero.titleLine1">Modabber Private</span><br><span data-i18n="hero.titleLine2">High School</span></h1>
+        <p class="lede" data-i18n="hero.lede">
+          A school built for Afghan students who are ready to work for something bigger:
+          national medals, international scholarships, and the habits of mind that carry
+          far past graduation day. Small classes, dedicated teachers, and a community that
+          knows every student by name.
+        </p>
+        <div class="d-flex gap-3 flex-wrap mt-4">
+          <a href="#achievements" class="btn btn-primary-modabber" data-i18n="hero.ctaAchievements">See Student Achievements</a>
+          <a href="#contact" class="btn btn-ghost-light" data-i18n="hero.ctaContact">Contact the School</a>
+        </div>
+        <div class="masthead-stats">
+          <div class="stat-pill"><div class="stat-num" data-target="21" data-suffix="">0</div><div class="stat-label" data-i18n="hero.stat1">Years Teaching</div></div>
+          <div class="stat-pill"><div class="stat-num" data-target="94" data-suffix="%">0%</div><div class="stat-label" data-i18n="hero.stat2">University Placement</div></div>
+          <div class="stat-pill"><div class="stat-num" data-target="37" data-suffix="">0</div><div class="stat-label" data-i18n="hero.stat3">Scholarships Since 2020</div></div>
+        </div>
+      </div>
 
-<h1>Hadi Jawadi</h1>
+      <div class="col-lg-6">
+        <div class="hero-art-wrap" id="heroArtWrap">
+          <svg class="hero-art" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of students at Modabber">
+            <defs>
+              <linearGradient id="archGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#E9C67F" stop-opacity=".55"/>
+                <stop offset="1" stop-color="#E9C67F" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M40 460 V220 C40 120 140 60 240 60 C340 60 440 120 440 220 V460 Z" fill="none" stroke="url(#archGrad)" stroke-width="10"/>
+            <g opacity=".9">
+              <circle cx="90" cy="90" r="16" fill="none" stroke="#E9C67F" stroke-width="2"/>
+              <circle cx="90" cy="90" r="16" transform="rotate(45 90 90)" fill="none" stroke="#E9C67F" stroke-width="2"/>
+              <circle cx="410" cy="140" r="11" fill="none" stroke="#8fd6d6" stroke-width="2"/>
+              <circle cx="410" cy="140" r="11" transform="rotate(45 410 140)" fill="none" stroke="#8fd6d6" stroke-width="2"/>
+            </g>
+            <ellipse cx="240" cy="430" rx="170" ry="18" fill="#0F2A42" opacity=".35"/>
+            <g transform="translate(78,205)">
+              <path d="M20 250 V150 C20 120 40 100 62 100 C84 100 104 120 104 150 V250 Z" fill="#3E8E8E"/>
+              <circle cx="62" cy="72" r="34" fill="#12324E"/>
+              <path d="M28 70 C28 46 44 30 62 30 C80 30 96 46 96 70 C96 58 84 50 62 50 C40 50 28 58 28 70 Z" fill="#E9C67F"/>
+              <rect x="6" y="150" width="34" height="46" rx="4" fill="#C99A3E"/>
+            </g>
+            <g transform="translate(190,160)">
+              <path d="M14 300 V178 C14 140 40 112 70 112 C100 112 126 140 126 178 V300 Z" fill="#1D4E78"/>
+              <circle cx="70" cy="82" r="40" fill="#12324E"/>
+              <path d="M30 96 C22 96 16 90 16 82 C16 74 22 68 30 68 L110 68 C118 68 124 74 124 82 C124 90 118 96 110 96 Z" fill="#F3E9D6"/>
+              <path d="M20 62 L70 40 L120 62 L70 78 Z" fill="#C1572B"/>
+              <rect x="66" y="62" width="8" height="34" fill="#C1572B"/>
+              <circle cx="70" cy="98" r="4" fill="#C1572B"/>
+            </g>
+            <g transform="translate(320,215)">
+              <path d="M18 240 V145 C18 116 36 98 58 98 C80 98 98 116 98 145 V240 Z" fill="#C99A3E"/>
+              <circle cx="58" cy="70" r="32" fill="#12324E"/>
+              <path d="M26 68 C26 45 40 30 58 30 C76 30 90 45 90 68 C90 57 79 50 58 50 C37 50 26 57 26 68 Z" fill="#E9C67F"/>
+              <rect x="70" y="118" width="46" height="34" rx="4" fill="#3E8E8E" transform="rotate(18 70 118)"/>
+            </g>
+            <g opacity=".85">
+              <circle cx="55" cy="330" r="4" fill="#E9C67F"/>
+              <circle cx="430" cy="300" r="4" fill="#8fd6d6"/>
+              <circle cx="405" cy="380" r="3" fill="#E9C67F"/>
+            </g>
+          </svg>
 
-<p class="subtitle">
-Building Artificial Superintelligence
-</p>
+          <div class="float-badge badge-1">
+            <div class="fb-icon" style="background:var(--pomegranate);"><i class="bi bi-mortarboard-fill"></i></div>
+            <div><div class="fb-num"> University· 2026</div><div class="fb-label" data-i18n="hero.badge1">Newest scholarship acceptance</div></div>
+          </div>
+          <div class="float-badge badge-2">
+            <div class="fb-icon" style="background:var(--turquoise);"><i class="bi bi-people-fill"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><i class="bi bi-chevron-down"></i></div>
+</header>
 
-<p class="description">
-I am a founder, software engineer, and AI researcher focused on advancing artificial intelligence to solve humanity's most important challenges. My mission is to contribute to the development of Artificial Superintelligence (ASI) that benefits everyone.
+<svg class="star-divider" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#starPatternDivider)"/></svg>
 
-<hr>
+<!-- ===== WELCOME ===== -->
+<section class="section" id="welcome">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 reveal">
+        <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="welcome.eyebrow">A Message From Our Headmaster</span></div>
+        <h2 data-i18n="welcome.heading">Welcome to Modabber.</h2>
+        <p style="max-width:480px;color:var(--muted);line-height:1.75;" data-i18n="welcome.body">
+          We started this school with one conviction: Afghan students deserve teachers who
+          push them as hard as any school in the world would. Every family who walks through
+          our doors becomes part of that effort.
+        </p>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="welcome-card">
+          <q data-i18n="welcome.quote">"We built Modabber on a simple belief: that a student here, given rigorous
+            teachers and a real chance, can compete anywhere on earth. Every scholarship on
+            our record started with a student we pushed to ask one harder question."</q>
+          <div class="welcome-signer">
+            <div class="welcome-avatar">RN</div>
+            <div>
+              <div class="name" data-i18n="welcome.signerName">Mr. Mohmmad Baqir modabber</div>
+              <div class="role" data-i18n="welcome.signerRole">Manager, Modabber Private High School</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== PILLARS ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="pillars.eyebrow">What We Stand For</span></div>
+      <h2 data-i18n="pillars.heading">Four things every student gets here.</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background:linear-gradient(135deg, var(--lapis), var(--turquoise));"><i class="bi bi-mortarboard-fill"></i></div>
+          <h3 data-i18n="pillars.p1title">Academic Excellence</h3>
+          <p data-i18n="pillars.p1body">An accelerated STEM and humanities track with Olympiad training built into the weekly schedule.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background:linear-gradient(135deg, var(--pomegranate), #a44a24);"><i class="bi bi-globe-asia-australia"></i></div>
+          <h3 data-i18n="pillars.p2title">Global Opportunity</h3>
+          <p data-i18n="pillars.p2body">Dedicated scholarship counseling for universities in China, Germany, Korea, and beyond.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background:linear-gradient(135deg, var(--turquoise), #256868);"><i class="bi bi-people-fill"></i></div>
+          <h3 data-i18n="pillars.p3title">Community &amp; Belonging</h3>
+          <p data-i18n="pillars.p3body">Small class sizes and advisors who know every student's family, not just their grades.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background:linear-gradient(135deg, var(--gold), #a87a29);"><i class="bi bi-heart-fill"></i></div>
+          <h3 data-i18n="pillars.p4title">Character &amp; Values</h3>
+          <p data-i18n="pillars.p4body">Weekly ethics seminars and a community-service hour built into every student's week.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== ACHIEVEMENTS ===== -->
+<section class="section" id="achievements">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="ach.eyebrow">Student Achievements</span></div>
+      <h2 data-i18n="ach.heading">Where our students are going.</h2>
+      <p data-i18n="ach.sub">Scholarships, medals, and published work earned by Modabber students — a running record we're proud to keep updating.</p>
+    </div>
 
+    <div class="featured-achieve reveal">
+      <div class="fa-icon"><i class="bi bi-mortarboard-fill"></i></div>
+      <div>
+        <div class="fa-tag" data-i18n="ach.featuredTag">Just Announced</div>
+        <h3 data-i18n="ach.featuredName">Kamran Abbasi — Full Scholarship to </h3>
+        <p data-i18n="ach.featuredDesc">Accepted with full funding to MIT's Class of 2029 to study Aerospace Engineering — Modabber's first MIT acceptance.</p>
+      </div>
+    </div>
 
+    <div class="filter-row reveal">
+      <button class="filter-chip active" data-filter="all" data-i18n="ach.filterAll">All Achievements</button>
+      <button class="filter-chip" data-filter="scholarship" data-i18n="ach.filterScholarship">Scholarships</button>
+      <button class="filter-chip" data-filter="olympiad" data-i18n="ach.filterOlympiad">Olympiads</button>
+      <button class="filter-chip" data-filter="competition" data-i18n="ach.filterCompetition">Competitions</button>
+      <button class="filter-chip" data-filter="research" data-i18n="ach.filterResearch">Research</button>
+    </div>
 
-</div>
+    <div class="row g-4" id="achieveGrid">
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="scholarship">
+        <div class="achieve-card cat-scholarship">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="achieve-year">2026</span></div>
+          <h3>Sara Aliyari</h3>
+          <p data-i18n="ach.a1">Full scholarship — Tsinghua University, China, studying Computer Science.</p>
+          <span class="achieve-tag" data-i18n="ach.tagScholarship">Scholarship</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="olympiad">
+        <div class="achieve-card cat-olympiad">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-trophy-fill"></i></div><span class="achieve-year">2026</span></div>
+          <h3>Farid Karimi</h3>
+          <p data-i18n="ach.a2">Gold medal — National Physics Olympiad, top individual score nationwide.</p>
+          <span class="achieve-tag" data-i18n="ach.tagOlympiad">Olympiad</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="scholarship">
+        <div class="achieve-card cat-scholarship">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="achieve-year">2025</span></div>
+          <h3>Nilofar Rassouli</h3>
+          <p data-i18n="ach.a3">DAAD scholarship — RWTH Aachen, Germany, studying Mechanical Engineering.</p>
+          <span class="achieve-tag" data-i18n="ach.tagScholarship">Scholarship</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="competition">
+        <div class="achieve-card cat-competition">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-award-fill"></i></div><span class="achieve-year">2025</span></div>
+          <h3> Karim ali </h3>
+          <p data-i18n="ach.a4">1st place — National Robotics Championship, autonomous navigation category.</p>
+          <span class="achieve-tag" data-i18n="ach.tagCompetition">Competition</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="scholarship">
+        <div class="achieve-card cat-scholarship">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="achieve-year">2025</span></div>
+          <h3>Laila Ahmadi</h3>
+          <p data-i18n="ach.a5">Full scholarship (KGSP) — Seoul National University, Korea.</p>
+          <span class="achieve-tag" data-i18n="ach.tagScholarship">Scholarship</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="research">
+        <div class="achieve-card cat-research">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-journal-text"></i></div><span class="achieve-year">2024</span></div>
+          <h3>Mohmmad Rezayee</h3>
+          <p data-i18n="ach.a6">Published research — co-authored paper in the Youth Journal of Applied Sciences.</p>
+          <span class="achieve-tag" data-i18n="ach.tagResearch">Research</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="competition">
+        <div class="achieve-card cat-competition">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-award-fill"></i></div><span class="achieve-year">2024</span></div>
+          <h3>Ali Karimi</h3>
+          <p data-i18n="ach.a7">1st place — Regional Debate Championship, best individual speaker.</p>
+          <span class="achieve-tag" data-i18n="ach.tagCompetition">Competition</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="olympiad">
+        <div class="achieve-card cat-olympiad">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-trophy-fill"></i></div><span class="achieve-year">2024</span></div>
+          <h3>Kamran Sadat</h3>
+          <p data-i18n="ach.a8">Silver medal — National Mathematics Olympiad, grade 11 division.</p>
+          <span class="achieve-tag" data-i18n="ach.tagOlympiad">Olympiad</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal ach-item" data-cat="scholarship">
+        <div class="achieve-card cat-scholarship">
+          <div class="achieve-top"><div class="achieve-icon"><i class="bi bi-mortarboard-fill"></i></div><span class="achieve-year">2023</span></div>
+          <h3>Zahra Ibrahimi</h3>
+          <p data-i18n="ach.a9">Merit scholarship — American University of Central Asia.</p>
+          <span class="achieve-tag" data-i18n="ach.tagScholarship">Scholarship</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</div>
+<svg class="star-divider" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#starPatternDivider)"/></svg>
 
+<!-- ===== CAMPUS ===== -->
+<section class="section section-alt" id="campus">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5 reveal">
+        <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="campus.eyebrow">Campus &amp; Student Life</span></div>
+        <h2 data-i18n="campus.heading">More than a classroom.</h2>
+        <p style="color:var(--muted);line-height:1.75;" data-i18n="campus.body">
+          Our campus is built so students have somewhere purposeful to go before the first
+          bell and after the last one — a lab to finish an experiment, a court to play a
+          match, a quiet room to read.
+        </p>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="campus-item"><div class="campus-icon"><i class="bi bi-flask"></i></div><div><h3 data-i18n="campus.c1t">Science Laboratories</h3><p data-i18n="campus.c1d">Fully equipped physics, chemistry, and biology labs for hands-on coursework.</p></div></div>
+        <div class="campus-item"><div class="campus-icon"><i class="bi bi-book-half"></i></div><div><h3 data-i18n="campus.c2t">Library &amp; Reading Hall</h3><p data-i18n="campus.c2d">A quiet study space stocked with Dari, Pashto, and English titles.</p></div></div>
+        <div class="campus-item"><div class="campus-icon"><i class="bi bi-cpu"></i></div><div><h3 data-i18n="campus.c3t">Computer &amp; Robotics Lab</h3><p data-i18n="campus.c3d">Where our robotics and coding clubs meet most weekday afternoons.</p></div></div>
+        <div class="campus-item"><div class="campus-icon"><i class="bi bi-trophy"></i></div><div><h3 data-i18n="campus.c4t">Sports Ground</h3><p data-i18n="campus.c4d">Volleyball, cricket, and football teams that compete across Ghazni schools.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FACULTY ===== -->
+<section class="section" id="faculty">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="faculty.eyebrow">The Faculty</span></div>
+      <h2 data-i18n="faculty.heading">Who teaches here.</h2>
+      <p data-i18n="faculty.sub">Every teacher at Modabber holds an advanced degree in their subject and a seat on at least one competition-coaching team.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4 reveal">
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background:linear-gradient(135deg, var(--lapis), var(--turquoise));">RN</div>
+          <span class="faculty-subject" data-i18n="faculty.subj1">Physics</span>
+          <h3 data-i18n="faculty.n1">Dr. Rashad Nabizada</h3>
+          <p data-i18n="faculty.b1">Eighteen years guiding Olympiad teams to national podiums. Holds a PhD in theoretical physics.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 reveal">
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background:linear-gradient(135deg, var(--pomegranate), #a44a24);">SR</div>
+          <span class="faculty-subject" data-i18n="faculty.subj2">Mathematics</span>
+          <h3 data-i18n="faculty.n2">Ms. Sevin Rahimi</h3>
+          <p data-i18n="faculty.b2">Believes every proof is a story worth telling well. Runs the weekend problem-solving circle.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 reveal">
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background:linear-gradient(135deg, var(--turquoise), #256868);">TM</div>
+          <span class="faculty-subject" data-i18n="faculty.subj3">Pashto</span>
+          <h3 data-i18n="faculty.n3">Mr. Tariq Mangal</h3>
+          <p data-i18n="faculty.b3"> Mr. Tariq Mangal is teaching Pashto more then 20 years.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 reveal">
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background:linear-gradient(135deg, var(--gold), #a87a29);">NH</div>
+          <span class="faculty-subject" data-i18n="faculty.subj4">Chemistry</span>
+          <h3 data-i18n="faculty.n4">Dr. Nargis Habibi</h3>
+          <p data-i18n="faculty.b4">Former research fellow, now a full-time mentor to Modabber's science-fair entrants.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 reveal">
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background:linear-gradient(135deg, var(--lapis), #285e88);">EQ</div>
+          <span class="faculty-subject" data-i18n="faculty.subj5">Biology</span>
+          <h3 data-i18n="faculty.n5">Mr.  kabir Qadiri</h3>
+          <p data-i18n="faculty.b5">Runs Biology classes and  doing resrseach about biological systems .</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 reveal">
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background:linear-gradient(135deg, var(--pomegranate), #7a3016);">GI</div>
+          <span class="faculty-subject" data-i18n="faculty.subj6">English &amp; IELTS Prep</span>
+          <h3 data-i18n="faculty.n6">Ms.  Zahra Esmati</h3>
+          <p data-i18n="faculty.b6">Gets every graduating class speaking with confidence in front of a scholarship panel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CREED ===== -->
+<section class="creed-band">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="eyebrow on-dark justify-content-center"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="creed.eyebrow">The Modabber Creed</span></div>
+    </div>
+    <div id="creedCarousel">
+      <div class="creed-slide active"><q data-i18n="creed.q1">Discipline is a form of self-respect, practiced daily until it stops feeling like effort.</q></div>
+      <div class="creed-slide"><q data-i18n="creed.q2">Curiosity opens the door. Confidence is what walks through it.</q></div>
+      <div class="creed-slide"><q data-i18n="creed.q3">We measure a student not by the grade on the page, but by the distance they traveled to earn it.</q></div>
+      <div class="creed-slide"><q data-i18n="creed.q4">Small effort, repeated without excuse, is the only kind of talent we can promise to teach.</q></div>
+      <div class="creed-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="testi.eyebrow">Families &amp; Graduates</span></div>
+      <h2 data-i18n="testi.heading">What people who know us say.</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <q data-i18n="testi.q1">My daughter came home every day excited about what she'd learned. That doesn't happen by accident.</q>
+          <div class="testimonial-who"><div class="testimonial-avatar">HJ</div><div><div class="t-name" data-i18n="testi.n1">Homaira J.</div><div class="t-role" data-i18n="testi.r1">Parent of a 10th grader</div></div></div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <q data-i18n="testi.q2">The teachers here don't just teach the textbook — they teach you how to think.</q>
+          <div class="testimonial-who"><div class="testimonial-avatar">AZ</div><div><div class="t-name" data-i18n="testi.n2">Ahmad Zia</div><div class="t-role" data-i18n="testi.r2">Class of 2025</div></div></div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <q data-i18n="testi.q3">We chose Modabber because they took our son's science fair project as seriously as he did.</q>
+          <div class="testimonial-who"><div class="testimonial-avatar">FN</div><div><div class="t-name" data-i18n="testi.n3">Farhad N.</div><div class="t-role" data-i18n="testi.r3">Parent of a 9th grader</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWS ===== -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="news.eyebrow">Latest at Modabber</span></div>
+      <h2 data-i18n="news.heading">What's happening this term.</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal">
+        <div class="news-card">
+          <div class="news-tab" style="background:var(--lapis);"></div>
+          <div class="body">
+            <span class="news-date" data-i18n="news.date1">March 2027</span>
+            <h3 data-i18n="news.t1">Annual Science Fair Announced</h3>
+            <p data-i18n="news.d1">Grades 9–12 will present original projects to a panel of visiting university faculty.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="news-card">
+          <div class="news-tab" style="background:var(--pomegranate);"></div>
+          <div class="body">
+            <span class="news-date" data-i18n="news.date2">This Fall</span>
+            <h3 data-i18n="news.t2">New Library Wing Opens</h3>
+            <p data-i18n="news.d2">An expanded reading hall and quiet study rooms are opening for the new academic year.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="news-card">
+          <div class="news-tab" style="background:var(--turquoise);"></div>
+          <div class="body">
+            <span class="news-date" data-i18n="news.date3">Ongoing</span>
+            <h3 data-i18n="news.t3">Regional Debate Season Begins</h3>
+            <p data-i18n="news.d3">Our debate team opens the season against schools from across Ghazni this month.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ENROLLMENT STEPS ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="enroll.eyebrow">Joining Modabber</span></div>
+      <h2 data-i18n="enroll.heading">How a family gets started.</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 reveal">
+        <div class="d-flex flex-column gap-4">
+          <div class="step-row"><div class="step-num">1</div><div><h3 data-i18n="enroll.s1t">Contact the Admissions Office</h3><p data-i18n="enroll.s1d">Reach out by phone, email, or the form below and we'll walk you through what's needed.</p></div></div>
+          <div class="step-row"><div class="step-num">2</div><div><h3 data-i18n="enroll.s2t">Placement Assessment &amp; Family Interview</h3><p data-i18n="enroll.s2d">A short assessment and a conversation with the student and their family.</p></div></div>
+          <div class="step-row"><div class="step-num">3</div><div><h3 data-i18n="enroll.s3t">Welcome Orientation</h3><p data-i18n="enroll.s3d">New students and families are invited to an orientation before the term begins.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><svg class="star-ico" viewBox="0 0 40 40"><use href="#star8"/></svg><span data-i18n="contact.eyebrow">Visit or Write to Us</span></div>
+      <h2 data-i18n="contact.heading">Find Modabber.</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-5 reveal">
+        <div class="contact-info-card h-100">
+          <div class="contact-row"><i class="bi bi-geo-alt"></i><div><div class="label" data-i18n="contact.labelAddress">Address</div><div class="value" data-i18n="contact.address">House 12, Street 3, Wazir Akbar Khan<br> Ghazni, Afghanistan</div></div></div>
+          <div class="contact-row"><i class="bi bi-telephone"></i><div><div class="label" data-i18n="contact.labelPhone">Phone</div><div class="value">+93 700 123 456</div></div></div>
+          <div class="contact-row"><i class="bi bi-envelope"></i><div><div class="label" data-i18n="contact.labelEmail">Email</div><div class="value">admissions@modabber.example</div></div></div>
+          <div class="contact-row"><i class="bi bi-clock"></i><div><div class="label" data-i18n="contact.labelHours">Office Hours</div><div class="value" data-i18n="contact.hours">Saturday–Thursday, 08:00–16:00</div></div></div>
+          <div class="contact-row"><i class="bi bi-mortarboard"></i><div><div class="label" data-i18n="contact.labelGrades">Grades Served</div><div class="value" data-i18n="contact.grades">9 through 12, co-educational</div></div></div>
+        </div>
+      </div>
+      <div class="col-lg-4 reveal">
+        <iframe class="map-frame" title="Map showing Modabber Private High School location in Ghazni"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=69.1780%2C34.5350%2C69.2380%2C34.5750&layer=mapnik&marker=34.5553%2C69.2075"
+          loading="lazy"></iframe>
+      </div>
+      <div class="col-lg-3 reveal">
+        <form class="form-card" onsubmit="return false;">
+          <div class="mb-3"><label for="cf-name" data-i18n="contact.formName">Full Name</label><input type="text" class="form-control" id="cf-name"></div>
+          <div class="mb-3"><label for="cf-email" data-i18n="contact.formEmail">Email</label><input type="email" class="form-control" id="cf-email"></div>
+          <div class="mb-3"><label for="cf-msg" data-i18n="contact.formMsg">Message</label><textarea class="form-control" id="cf-msg" rows="3"></textarea></div>
+          <button type="submit" class="btn btn-primary-modabber w-100" data-i18n="contact.formSend">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
-
-© 2026 Hadi Jawadi
-
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="brand-mark mb-3" style="color:#fff;"><span class="crest-badge"><span>M</span></span>Modabber</div>
+        <p style="max-width:320px;" data-i18n="footer.tagline">Modabber Private High School — educating with intention since 2005. Grades 9 through 12, Ghazni, Afghanistan.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="foot-head" data-i18n="footer.explore">Explore</div>
+        <ul>
+          <li><a href="#welcome" data-i18n="nav.welcome">Welcome</a></li>
+          <li><a href="#achievements" data-i18n="nav.achievements">Achievements</a></li>
+          <li><a href="#campus" data-i18n="nav.campus">Campus</a></li>
+          <li><a href="#faculty" data-i18n="nav.faculty">Faculty</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="foot-head" data-i18n="footer.school">School</div>
+        <ul>
+          <li><a href="#news" data-i18n="nav.news">News</a></li>
+          <li><a href="#contact" data-i18n="footer.enrollment">Enrollment</a></li>
+          <li><a href="#contact" data-i18n="footer.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="foot-head" data-i18n="footer.follow">Follow the Record</div>
+        <div class="d-flex gap-3 fs-5">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span data-i18n="footer.copyright">© 2026 Modabber Private High School, Ghazni. All rights reserved.</span>
+    </div>
+  </div>
 </footer>
 
-</div>
+<button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+  const translations = {
+    fa: {
+      "nav.welcome":"خوش‌آمدید","nav.achievements":"دستاوردها","nav.campus":"محیط مکتب","nav.faculty":"استادان","nav.news":"خبرها","nav.contact":"تماس با ما",
+      "hero.pill":"ثبت‌نام برای سال ۲۰۲۷ باز است",
+      "hero.eyebrow":"لیسه خصوصی · صنف 1 تا ۱۲ · غزنی، افغانستان",
+      "hero.titleLine1":"لیسهٔ خصوصی","hero.titleLine2":"مدبر",
+      "hero.lede":"مکتبی برای دانش‌آموزان افغان که آماده‌اند برای چیزی بزرگ‌تر تلاش کنند: مدال‌های ملی، بورسیه‌های بین‌المللی و عادت‌های فکری که تا مدت‌ها بعد از فارغ‌التحصیلی همراه‌شان می‌ماند. صنف‌های کوچک، استادان متعهد و اجتماعی که هر دانش‌آموز را به نام می‌شناسد.",
+      "hero.ctaAchievements":"دیدن دستاوردهای دانش‌آموزان","hero.ctaContact":"تماس با مکتب",
+      "hero.stat1":"سال سابقه آموزشی","hero.stat2":"نرخ جذب در دانشگاه","hero.stat3":"بورسیه از سال ۲۰۲۰","hero.stat4":"نسبت شاگرد به استاد",
+      "welcome.eyebrow":"پیامی از سرمعلم","welcome.heading":"به مدبر خوش آمدید.",
+      "welcome.body":"ما این مکتب را با یک باور بنیاد گذاشتیم: دانش‌آموزان افغان شایسته استادانی‌اند که به اندازه هر مکتب برتر جهان از آنان تلاش بخواهند. هر خانواده‌ای که وارد این مکتب می‌شود، بخشی از این تلاش می‌گردد.",
+      "welcome.quote":"ما مدبر را بر یک باور ساده بنا کردیم: دانش‌آموزی که در اینجا درس می‌خواند، اگر استادان جدی و فرصت واقعی داشته باشد، می‌تواند در هر نقطه جهان رقابت کند. هر بورسیه‌ای در سوابق ما، از دانش‌آموزی آغاز شده که او را واداشتیم یک پرسش دشوارتر بپرسد.",
+      "welcome.signerName":"محترم روح‌الله نظری","welcome.signerRole":"سرمعلم، لیسه خصوصی مدبر",
+      "pillars.eyebrow":"ارزش‌های ما","pillars.heading":"چهار چیزی که هر دانش‌آموز اینجا به دست می‌آورد.",
+      "pillars.p1title":"برتری علمی","pillars.p1body":"یک مسیر تسریع‌شده در علوم و انسانی، همراه با تمرین المپیاد که در برنامه هفتگی گنجانده شده است.",
+      "pillars.p2title":"فرصت جهانی","pillars.p2body":"مشاوره اختصاصی بورسیه برای دانشگاه‌های چین، آلمان، کوریا و فراتر از آن.",
+      "pillars.p3title":"اجتماع و تعلق","pillars.p3body":"صنف‌های کوچک و مشاورانی که خانواده هر دانش‌آموز را می‌شناسند، نه فقط نمرات او را.",
+      "pillars.p4title":"شخصیت و ارزش‌ها","pillars.p4body":"سمینارهای هفتگی اخلاق و یک ساعت خدمت اجتماعی در برنامه هفتگی هر دانش‌آموز.",
+      "ach.eyebrow":"دستاوردهای دانش‌آموزان","ach.heading":"دانش‌آموزان ما به کجا می‌روند.",
+      "ach.sub":"بورسیه‌ها، مدال‌ها و آثار منتشرشده‌ای که دانش‌آموزان مدبر کسب کرده‌اند — سابقه‌ای در حال رشد که با افتخار آن را به‌روز نگه می‌داریم.",
+      "ach.featuredTag":"تازه اعلام‌شده","ach.featuredName":"کامران عباسی — بورسیه کامل به MIT",
+      "ach.featuredDesc":"با بورسیه کامل در صنف فارغ‌التحصیلی ۲۰۲۹ در رشته انجینیری هوافضا به دانشگاه MIT راه یافت — نخستین پذیرش MIT برای مدبر.",
+      "ach.filterAll":"همه دستاوردها","ach.filterScholarship":"بورسیه‌ها","ach.filterOlympiad":"المپیادها","ach.filterCompetition":"رقابت‌ها","ach.filterResearch":"تحقیقات",
+      "ach.a1":"بورسیه کامل — دانشگاه تسینگهوا، چین، رشته کامپیوتر ساینس.",
+      "ach.a2":"مدال طلا — المپیاد ملی فزیک، بالاترین امتیاز انفرادی در سطح کشور.",
+      "ach.a3":"بورسیه DAAD — دانشگاه آخن آلمان (RWTH)، رشته انجینیری میخانیک.",
+      "ach.a4":"مقام اول — مسابقات ملی روبوتیک، بخش ناوبری خودکار.",
+      "ach.a5":"بورسیه کامل (KGSP) — دانشگاه ملی سئول، کوریای جنوبی.",
+      "ach.a6":"تحقیق منتشرشده — هم‌نویسنده مقاله در مجله علوم کاربردی جوانان.",
+      "ach.a7":"مقام اول — مسابقات منطقه‌ای مناظره، بهترین سخنران انفرادی.",
+      "ach.a8":"مدال نقره — المپیاد ملی ریاضیات، بخش صنف یازدهم.",
+      "ach.a9":"بورسیه استحقاقی — دانشگاه امریکایی آسیای مرکزی.",
+      "ach.tagScholarship":"بورسیه","ach.tagOlympiad":"المپیاد","ach.tagCompetition":"رقابت","ach.tagResearch":"تحقیق",
+      "campus.eyebrow":"محیط مکتب و زندگی دانش‌آموزی","campus.heading":"بیشتر از یک صنف درسی.",
+      "campus.body":"محیط مکتب ما طوری ساخته شده که دانش‌آموزان پیش از زنگ اول و بعد از زنگ آخر جای هدفمندی برای رفتن داشته باشند — یک لابراتوار برای تکمیل یک تجربه، یک زمین برای یک مسابقه، یک اتاق آرام برای مطالعه.",
+      "campus.c1t":"لابراتوارهای علومی","campus.c1d":"لابراتوارهای کاملاً مجهز فزیک، کیمیا و بیولوژی برای درس‌های عملی.",
+      "campus.c2t":"کتابخانه و تالار مطالعه","campus.c2d":"فضای آرام مطالعه با کتاب‌های دری، پشتو و انگلیسی.",
+      "campus.c3t":"لابراتوار کامپیوتر و روبوتیک","campus.c3d":"جایی که کلوپ‌های روبوتیک و کودنویسی بیشتر بعدازظهرهای هفته گرد هم می‌آیند.",
+      "campus.c4t":"زمین ورزشی","campus.c4d":"تیم‌های والیبال، کریکت و فتبال که با مکاتب دیگر غزنی رقابت می‌کنند.",
+      "campus.c5t":"استودیوی هنر و موسیقی","campus.c5d":"درس‌های اختیاری هفتگی خطاطی، نقاشی و موسیقی برای هر صنف.",
+      "campus.c6t":"سرویس ترانسپورت مکتب","campus.c6d":"خطوط سرویس با نظارت که بیشتر مربوطات غزنی را پوشش می‌دهد.",
+      "faculty.eyebrow":"استادان مکتب","faculty.heading":"چه کسی اینجا درس می‌دهد.",
+      "faculty.sub":"هر استاد مدبر دارای سند تحصیلی عالی در رشته خود است و در حداقل یک تیم آماده‌سازی مسابقات نقش دارد.",
+      "faculty.subj1":"فزیک و ستاره‌شناسی","faculty.n1":"محترم دکتر رشاد نبی‌زاده","faculty.b1":"هجده سال تجربه در رهبری تیم‌های المپیاد تا سکوهای ملی. دارای درجه دکترا در فزیک نظری.",
+      "faculty.subj2":"ریاضیات","faculty.n2":"محترمه سِوین رحیمی","faculty.b2":"باور دارد هر برهان ریاضی داستانی است که ارزش گفتن خوب را دارد. مسئول محفل هفتگی حل مسئله در روزهای تعطیل.",
+      "faculty.subj3":"ادبیات و مناظره","faculty.n3":"محترم طارق منگل","faculty.b3":"مربی برنامه مناظره مکتب و استاد ادبیات تطبیقی برای صنوف دوازدهم.",
+      "faculty.subj4":"کیمیا","faculty.n4":"محترمه دکتر نرگس حبیبی","faculty.b4":"پیشتر همکار تحقیقاتی، اکنون رهنمای تمام‌وقت شرکت‌کنندگان نمایشگاه علمی مدبر.",
+      "faculty.subj6":"انگلیسی و آمادگی آیلتس","faculty.n6":"محترمه گل‌لعل عصمتی","faculty.b6":"هر صنف فارغ‌التحصیل را با اعتماد به‌نفس در برابر هیئت بورسیه صحبت‌کردن یاد می‌دهد.",
+      "creed.eyebrow":"منشور مدبر",
+      "creed.q1":"نظم شکلی از احترام به خود است؛ تمرینی روزانه، تا زمانی که دیگر تلاش به‌نظر نرسد.",
+      "creed.q2":"کنجکاوی در را باز می‌کند. اعتماد به‌نفس آن چیزی است که از آن عبور می‌کند.",
+      "creed.q3":"ما یک دانش‌آموز را نه با نمره‌ای در کاغذ، بلکه با مسافتی که برای کسب آن پیموده می‌سنجیم.",
+      "creed.q4":"تلاش کوچک، بدون بهانه و تکرارشونده، تنها نوع استعدادی است که می‌توانیم قول تدریس آن را بدهیم.",
+      "testi.eyebrow":"خانواده‌ها و فارغ‌التحصیلان","testi.heading":"کسانی که ما را می‌شناسند چه می‌گویند.",
+      "testi.q1":"دخترم هر روز با هیجان از آنچه یاد گرفته بود به خانه می‌آمد. این اتفاقی نیست.","testi.n1":"محترمه همیرا ج.","testi.r1":"والده یک دانش‌آموز صنف دهم",
+      "testi.q2":"استادان اینجا فقط کتاب درسی را نمی‌آموزند — چگونه فکر کردن را یاد می‌دهند.","testi.n2":"احمد ضیا","testi.r2":"فارغ‌التحصیل سال ۲۰۲۵",
+      "testi.q3":"ما مدبر را انتخاب کردیم چون پروژه نمایشگاه علمی پسرمان را به‌همان‌اندازه او جدی گرفتند.","testi.n3":"محترم فرهاد ن.","testi.r3":"پدر یک دانش‌آموز صنف اول",
+      "news.eyebrow":"تازه‌ترین خبرهای مدبر","news.heading":"این ترم چه می‌گذرد.",
+      "news.date1":"مارچ ۲۰۲۷","news.t1":"نمایشگاه سالانه علمی اعلام شد","news.d1":"صنوف اول تا دوازدهم پروژه‌های اصیل خود را به هیئتی از استادان دانشگاه‌های میهمان ارائه می‌کنند.",
+      "news.date2":"این خزان","news.t2":"بخش جدید کتابخانه افتتاح می‌شود","news.d2":"یک تالار مطالعه گسترده‌تر و اتاق‌های آرام مطالعه برای سال تحصیلی جدید باز می‌شود.",
+      "news.date3":"جریان دارد","news.t3":"فصل مناظرات منطقه‌ای آغاز شد","news.d3":"تیم مناظره ما این ماه فصل را در برابر مکاتب سراسر غزنی آغاز می‌کند.",
+      "enroll.eyebrow":"پیوستن به مدبر","enroll.heading":"یک خانواده چگونه آغاز می‌کند.",
+      "enroll.s1t":"با دفتر پذیرش تماس بگیرید","enroll.s1d":"از طریق تلفن، ایمیل یا فورم پایین با ما در تماس شوید تا هر آنچه لازم است برایتان توضیح دهیم.",
+      "enroll.s2t":"ارزیابی سطح و مصاحبه خانوادگی","enroll.s2d":"یک ارزیابی کوتاه و گفتگو با دانش‌آموز و خانواده‌اش.",
+      "enroll.s3t":"برنامه خوش‌آمدگویی","enroll.s3d":"دانش‌آموزان و خانواده‌های جدید پیش از آغاز ترم به یک برنامه آشنایی دعوت می‌شوند.",
+      "contact.eyebrow":"به ما سر بزنید یا بنویسید","contact.heading":"مدبر را پیدا کنید.",
+      "contact.labelAddress":"آدرس","contact.address":"مرکز ولایت غزنی-شهرک نوآباد-مقابل مدرسه چهارده معصوم br>غزنی، افغانستان",
+      "contact.labelPhone":"تیلفون","contact.labelEmail":"ایمیل",
+      "contact.labelHours":"ساعات کاری","contact.hours":"شنبه تا پنجشنبه، ۸:۰۰ تا ۱۶:۰   ۰",
+      "contact.labelGrades":"صنوف","contact.grades":" اول  تا دوازدهم، مختلط",
+      "contact.formName":"نام کامل","contact.formEmail":"ایمیل","contact.formMsg":"پیام","contact.formSend":"ارسال پیام",
+      "footer.tagline":"لیسه خصوصی مدبر — آموزش هدفمند از سال ۲۰۰۵. صنوف اول تا دوازدهم، غزنی، افغانستان.",
+      "footer.explore":"دسترسی سریع","footer.school":"مکتب","footer.enrollment":"پذیرش","footer.contact":"تماس","footer.follow":"سابقه ما را دنبال کنید",
+      "footer.copyright":"© ۲۰۲۶ لیسه خصوصی مدبر، غزنی. همه حقوق محفوظ است.",
+    }
+  };
+  const originals = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { originals[el.getAttribute('data-i18n')] = el.innerHTML; });
+
+  function applyLang(lang){
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      el.innerHTML = lang === 'fa' ? (translations.fa[key] ?? originals[key]) : originals[key];
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+    document.getElementById('bsCss').href = lang === 'fa'
+      ? 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css'
+      : 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css';
+    document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+  }
+  document.querySelectorAll('.lang-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
+  });
+
+  const nav = document.getElementById('mainNav');
+  const onScroll = () => { window.scrollY > 40 ? nav.classList.add('is-scrolled') : nav.classList.remove('is-scrolled'); };
+  document.addEventListener('scroll', onScroll); onScroll();
+
+  const backBtn = document.getElementById('backToTop');
+  document.addEventListener('scroll', ()=>{ backBtn.classList.toggle('show', window.scrollY > 500); });
+  backBtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    reveals.forEach(el=>io.observe(el));
+  } else { reveals.forEach(el=>el.classList.add('is-visible')); }
+
+  const statEls = document.querySelectorAll('.stat-num');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function animateStats(){
+    statEls.forEach(el=>{
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      if (prefersReduced){ el.textContent = target + suffix; return; }
+      let start = null; const duration = 1100;
+      function step(ts){
+        if(!start) start = ts;
+        const progress = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.floor(progress * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  const statsWrap = document.querySelector('.masthead-stats');
+  if (statsWrap && 'IntersectionObserver' in window){
+    const statIo = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ animateStats(); statIo.disconnect(); } });
+    },{threshold:.3});
+    statIo.observe(statsWrap);
+  } else { animateStats(); }
+
+  const slides = document.querySelectorAll('.creed-slide');
+  const dotsWrap = document.querySelector('.creed-dots');
+  let current = 0;
+  slides.forEach((_,i)=>{
+    const dot = document.createElement('button');
+    if(i===0) dot.classList.add('active');
+    dot.setAttribute('aria-label','Show creed line '+(i+1));
+    dot.addEventListener('click',()=>showSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = document.querySelectorAll('.creed-dots button');
+  function showSlide(i){
+    slides[current].classList.remove('active'); dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active'); dots[current].classList.add('active');
+  }
+  if(!prefersReduced){ setInterval(()=>showSlide((current+1)%slides.length),5000); }
+
+  const chips = document.querySelectorAll('.filter-chip');
+  const items = document.querySelectorAll('.ach-item');
+  chips.forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      items.forEach(item=>{ item.style.display = (f==='all' || item.dataset.cat===f) ? '' : 'none'; });
+    });
+  });
+
+  /* subtle mouse parallax on hero illustration */
+  const artWrap = document.getElementById('heroArtWrap');
+  const art = artWrap ? artWrap.querySelector('.hero-art') : null;
+  if (art && !prefersReduced && window.matchMedia('(hover:hover)').matches){
+    document.querySelector('.masthead').addEventListener('mousemove', (e)=>{
+      const r = artWrap.getBoundingClientRect();
+      const cx = r.left + r.width/2, cy = r.top + r.height/2;
+      const dx = (e.clientX - cx) / r.width, dy = (e.clientY - cy) / r.height;
+      art.style.transform = `translate(${dx*10}px, ${dy*10}px)`;
+    });
+    document.querySelector('.masthead').addEventListener('mouseleave', ()=>{ art.style.transform = 'translate(0,0)'; });
+  }
+</script>
 </body>
 </html>
